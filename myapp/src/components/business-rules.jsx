@@ -64,7 +64,7 @@ export function BusinessRulesJsx() {
   return (
     (<section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Nuestras Reglas de Negocio</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Reglas de Negocio</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {rules.map((rule, index) => (
             <motion.div

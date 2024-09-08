@@ -20,7 +20,7 @@ export function ContactFormJsx() {
   return (
     (<div className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-8">Contáctanos</h2>
+        <h2 className="text-4xl font-bold text-center mb-8">Contáctanos para solicitar cotización</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
           <div className="mb-4">
             <label htmlFor="name" className="block mb-2">Nombre</label>
@@ -47,7 +47,7 @@ export function ContactFormJsx() {
             {errors.email && <span className="text-red-500">{errors.email.message}</span>}
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block mb-2">Mensaje</label>
+            <label htmlFor="message" className="block mb-2">Describa su consulta</label>
             <textarea
               id="message"
               {...register('message', { required: 'Este campo es requerido' })}
