@@ -46,7 +46,7 @@ export function ProjectCarousel() {
 
   return (
     (<section
-      className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-500 to-purple-600">
+      className="w-full py-12 md:py-24 lg:py-32 bg-blue-950">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold text-center text-white mb-12">Nuestros Proyectos</h2>
         <Carousel className="w-full max-w-5xl mx-auto">
