@@ -7,12 +7,12 @@ import { Link } from 'react-scroll';
 export function HeroJsx() {
   return (
     (<div
-      className="relative bg-blue-600 text-white min-h-screen flex items-center">
+      className="relative bg-blue-950 text-white min-h-screen flex items-center">
       {/* Imagen de fondo */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/placeholder.svg?height=1080&width=1920')",
+          backgroundImage: "url('/img/fondohero.jpg?height=1080&width=1920')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
