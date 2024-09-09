@@ -5,8 +5,8 @@ import { BusinessRulesJsx } from "@/components/business-rules";
 import { BusinessPlansJsx } from "@/components/business-plans";
 import { ContactFormJsx } from "@/components/contact-form";
 import { FooterJsx } from "@/components/footer";
-import { ProjectsShowcaseJsx } from "@/components/projects-showcase";
 import { WhatWeDo } from "@/components/what-we-do";
+import { ProjectCarousel } from "@/components/project-carousel";
 import React, { useState } from 'react';
 
 export default function Home(){
@@ -27,7 +27,7 @@ export default function Home(){
         <BusinessPlansJsx />
       </section>
       <section id="projects">
-        <ProjectsShowcaseJsx />
+        <ProjectCarousel />
       </section>
       <section id="contact">
         <ContactFormJsx />
