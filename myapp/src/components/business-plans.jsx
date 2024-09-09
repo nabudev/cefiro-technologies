@@ -43,10 +43,6 @@ export function BusinessPlansJsx() {
                   </li>
                 ))}
               </ul>
-              <button
-                className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300">
-                Elegir Plan
-              </button>
             </motion.div>
           ))}
         </div>
