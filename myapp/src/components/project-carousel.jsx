@@ -49,6 +49,7 @@ export function ProjectCarousel() {
       className="w-full py-12 md:py-24 lg:py-32 bg-blue-950">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold text-center text-white mb-12">Nuestros Proyectos</h2>
+        <p className="text-xl font-bold text-center text-white mb-12">Te mostramos nuestros últimos proyectos donde plasmamos nuestra calidad de diseño y desarrollo</p>
         <Carousel className="w-full max-w-5xl mx-auto">
           <CarouselContent>
             {projects.map((project) => (
