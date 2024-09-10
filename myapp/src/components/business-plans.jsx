@@ -5,8 +5,7 @@ import { motion } from 'framer-motion';
 
 const plans = [
   { name: 'Básico', price: '99', features: ['Característica 1', 'Característica 2', 'Característica 3'] },
-  { name: 'Pro', price: '199', features: ['Todo del Básico', 'Característica 4', 'Característica 5'] },
-  { name: 'Enterprise', price: '299', features: ['Todo del Pro', 'Característica 6', 'Soporte 24/7'] },
+  { name: 'Pro', price: '199', features: ['Todo del Básico', 'Característica 4', 'Característica 5'] }
 ];
 
 export function BusinessPlansJsx() {
@@ -14,7 +13,7 @@ export function BusinessPlansJsx() {
     (<div className="py-20 bg-gray-100">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-8">Nuestros Planes</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
