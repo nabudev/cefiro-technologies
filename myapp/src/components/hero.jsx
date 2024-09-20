@@ -29,7 +29,7 @@ export function HeroJsx() {
             Innovación Tecnológica para tu Negocio
           </h1>
           <p className="text-xl mb-8">
-            Cefiro Technologies: Impulsando el futuro digital de las empresas con soluciones tecnológicas de vanguardia.
+            Impulsamos el futuro digital de las empresas con soluciones tecnológicas
           </p>
           <div
             className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
