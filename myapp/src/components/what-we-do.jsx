@@ -1,29 +1,25 @@
 'use client'
 
-import { Briefcase, Code, Megaphone, Users } from "lucide-react"
+import { Users, Code, DollarSign } from "lucide-react"
 
 export function WhatWeDo() {
   return (
     (<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold text-center mb-12">¿Qué hacemos?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ServiceCard
             icon={<Code className="h-10 w-10 mb-4 text-primary" />}
             title="Desarrollo Web"
-            description="Creamos sitios web modernos y responsivos que se adaptan a las necesidades de tu negocio." />
+            description="Creamos sitios web modernos que se adaptan a las necesidades de tu negocio." />
           <ServiceCard
-            icon={<Megaphone className="h-10 w-10 mb-4 text-primary" />}
-            title="Marketing Digital"
-            description="Desarrollamos estrategias de marketing online para aumentar tu visibilidad y atraer más clientes." />
-          <ServiceCard
-            icon={<Briefcase className="h-10 w-10 mb-4 text-primary" />}
-            title="Consultoría Empresarial"
-            description="Ofrecemos asesoramiento experto para optimizar tus procesos y mejorar la eficiencia de tu empresa." />
+            icon={<DollarSign className="h-10 w-10 mb-4 text-primary" />}
+            title="Presupuesto"
+            description="Ofrecemos presupuestos sin costo, transparentes y detallados. Con opciones flexibles para diferentes escalas y necesidades." />
           <ServiceCard
             icon={<Users className="h-10 w-10 mb-4 text-primary" />}
-            title="Gestión de Redes Sociales"
-            description="Manejamos tus perfiles en redes sociales para construir una comunidad sólida alrededor de tu marca." />
+            title="Reuniones"
+            description="Mantenemos una comunicación constante a través de reuniones regulares para garantizar que estés siempre al tanto del progreso de tu proyecto." />
         </div>
       </div>
     </section>)
