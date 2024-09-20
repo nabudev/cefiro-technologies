@@ -23,7 +23,7 @@ export function ContactFormJsx() {
         <h2 className="text-4xl font-bold text-center mb-8">Contáctanos para solicitar cotización</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
           <div className="mb-4">
-            <label htmlFor="name" className="block mb-2">Nombre</label>
+            <label htmlFor="name" className="block mb-2">Tú nombre</label>
             <input
               type="text"
               id="name"
@@ -32,7 +32,7 @@ export function ContactFormJsx() {
             {errors.name && <span className="text-red-500">{errors.name.message}</span>}
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block mb-2">Email</label>
+            <label htmlFor="email" className="block mb-2">Tú email</label>
             <input
               type="email"
               id="email"
@@ -47,7 +47,7 @@ export function ContactFormJsx() {
             {errors.email && <span className="text-red-500">{errors.email.message}</span>}
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block mb-2">Describa su consulta</label>
+            <label htmlFor="message" className="block mb-2">Describe tu consulta</label>
             <textarea
               id="message"
               {...register('message', { required: 'Este campo es requerido' })}
