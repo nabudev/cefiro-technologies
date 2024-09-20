@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -10,38 +9,27 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Button } from "@/components/ui/button"
 
 export function ProjectCarousel() {
   const projects = [
     {
       id: 1,
-      title: "Eco Smart Home",
-      description: "Sistema de domótica para hogares ecológicos",
-      image: "/placeholder.svg?height=400&width=600",
-      link: "/projects/eco-smart-home",
+      title: "Instituto Superior San Cristobal",
+      description: "Sistema de gestión para institucion educativa que permite a los alumnos inscribirse a los exámenes finales de sus carreras",
+      image: "img/issc.png?height=400&width=600"
     },
     {
       id: 2,
-      title: "City Transit App",
-      description: "Aplicación de transporte público en tiempo real",
-      image: "/placeholder.svg?height=400&width=600",
-      link: "/projects/city-transit-app",
+      title: "Mena Vial SRL",
+      description: "Sitio web informativo para una empresa de construcción con el fin de mostrarle a potenciales clientes los productos y servicios que se ofrecen",
+      image: "img/mena.png?height=400&width=600"
     },
     {
       id: 3,
-      title: "Health Track",
-      description: "Plataforma de seguimiento de salud personal",
-      image: "/placeholder.svg?height=400&width=600",
-      link: "/projects/health-track",
-    },
-    {
-      id: 4,
-      title: "EduConnect",
-      description: "Plataforma de educación en línea",
-      image: "/placeholder.svg?height=400&width=600",
-      link: "/projects/educonnect",
-    },
+      title: "AutoElite Motors",
+      description: "Sitio web de concesionaria diseñado y desarrollado para promocionar la venta de automóviles",
+      image: "img/autoelite.png?height=400&width=600"
+    }
   ]
 
   return (
@@ -64,9 +52,6 @@ export function ProjectCarousel() {
                       <div className="p-4">
                         <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
                         <p className="text-sm text-gray-600 mb-4">{project.description}</p>
-                        <Link href={project.link}>
-                          <Button className="w-full">Ver Proyecto</Button>
-                        </Link>
                       </div>
                     </CardContent>
                   </Card>
