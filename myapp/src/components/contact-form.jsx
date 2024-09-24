@@ -8,28 +8,35 @@ export function ContactFormJsx() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data, event) => {
+    event.preventDefault();  // Evita el comportamiento predeterminado del formulario
     setIsSubmitting(true);
     
-    // Aquí se realiza el envío directo a FormSubmit
-    const form = document.createElement('form');
-    form.setAttribute('action', 'https://formsubmit.co/nabudev01@gmail.com'); // Cambia por tu email registrado en FormSubmit
-    form.setAttribute('method', 'POST');
-    form.setAttribute('style', 'display:none');
+    try {
+      // Realiza el envío a FormSubmit usando fetch
+      const response = await fetch('https://formsubmit.co/ajax/nabudev01@gmail.com', {  // Cambia a tu correo registrado en FormSubmit
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message
+        })
+      });
 
-    const inputs = Object.keys(data).map(key => {
-      const input = document.createElement('input');
-      input.setAttribute('type', 'hidden');
-      input.setAttribute('name', key);
-      input.setAttribute('value', data[key]);
-      return input;
-    });
+      if (response.ok) {
+        setSubmitMessage('¡Gracias por contactarnos! Te responderemos pronto.');
+      } else {
+        setSubmitMessage('Ocurrió un error. Por favor, inténtalo de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      setSubmitMessage('Ocurrió un error al enviar el mensaje. Intenta nuevamente.');
+    }
 
-    inputs.forEach(input => form.appendChild(input));
-    document.body.appendChild(form);
-    form.submit();
-
-    setSubmitMessage('¡Gracias por contactarnos! Te responderemos pronto.');
     setIsSubmitting(false);
   };
 
