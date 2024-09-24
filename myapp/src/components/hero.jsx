@@ -12,7 +12,7 @@ export function HeroJsx() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/img/fondohero.jpg?height=1080&width=1920')",
+          backgroundImage: "url('/img/fondohero.png?height=1080&width=1920')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
