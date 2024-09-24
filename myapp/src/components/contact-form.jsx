@@ -8,11 +8,27 @@ export function ContactFormJsx() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
-  const onSubmit = async (data) => {
+  const onSubmit = (data) => {
     setIsSubmitting(true);
-    // Aquí simularemos el envío del formulario
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    console.log(data);
+    
+    // Aquí se realiza el envío directo a FormSubmit
+    const form = document.createElement('form');
+    form.setAttribute('action', 'https://formsubmit.co/nabudev01@gmail.com'); // Cambia por tu email registrado en FormSubmit
+    form.setAttribute('method', 'POST');
+    form.setAttribute('style', 'display:none');
+
+    const inputs = Object.keys(data).map(key => {
+      const input = document.createElement('input');
+      input.setAttribute('type', 'hidden');
+      input.setAttribute('name', key);
+      input.setAttribute('value', data[key]);
+      return input;
+    });
+
+    inputs.forEach(input => form.appendChild(input));
+    document.body.appendChild(form);
+    form.submit();
+
     setSubmitMessage('¡Gracias por contactarnos! Te responderemos pronto.');
     setIsSubmitting(false);
   };
