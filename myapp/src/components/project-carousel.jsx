@@ -25,6 +25,12 @@ export function ProjectCarousel() {
       image: "img/mena.png?height=400&width=600"
     },
     {
+      id: 4,
+      title: "Inmobiliaria Zamora",
+      description: "Página web diseñado y desarrollado para impulsar el alcance de visualizaciones de los servicios de Inmobiliaria Zamora",
+      image: "img/zamora.png?height=400&width=600"
+    },
+    {
       id: 3,
       title: "AutoElite Motors",
       description: "Sitio web de concesionaria diseñado y desarrollado para promocionar la venta de automóviles",
