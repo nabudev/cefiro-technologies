@@ -12,6 +12,7 @@ const navItems = [
 
 export function NavbarJsx({ activeSection, setActiveSection }) {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,10 @@ export function NavbarJsx({ activeSection, setActiveSection }) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
 
   return (
     (<nav
@@ -31,21 +36,22 @@ export function NavbarJsx({ activeSection, setActiveSection }) {
             className={`text-2xl font-bold ${scrolled ? 'text-blue-600' : 'text-white'}`}>
             Cefiro Technologies
           </a>
-          <ul className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <li key={item.id}>
-                <motion.a
-                  href={`#${item.id}`}
-                  className={`text-lg ${activeSection === item.id ? 'text-blue-300' : ''} ${scrolled ? 'text-gray-600 hover:text-blue-600' : 'text-white hover:text-blue-300'}`}
-                  onClick={() => setActiveSection(item.id)}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}>
-                  {item.label}
-                </motion.a>
-              </li>
+              <motion.a
+                key={item.id}
+                href={`#${item.id}`}
+                className={`text-lg ${activeSection === item.id ? 'text-blue-300' : ''} ${scrolled ? 'text-gray-600 hover:text-blue-600' : 'text-white hover:text-blue-300'}`}
+                onClick={() => setActiveSection(item.id)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}>
+                {item.label}
+              </motion.a>
             ))}
-          </ul>
-          <button className={`md:hidden ${scrolled ? 'text-gray-600' : 'text-white'}`}>
+          </div>
+          <button
+            className={`md:hidden ${scrolled ? 'text-gray-600' : 'text-white'}`}
+            onClick={toggleMobileMenu}>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -61,6 +67,23 @@ export function NavbarJsx({ activeSection, setActiveSection }) {
           </button>
         </div>
       </div>
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white">
+          {navItems.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className="block py-2 px-4 text-gray-600 hover:bg-gray-100"
+              onClick={() => {
+                setActiveSection(item.id);
+                setMobileMenuOpen(false);
+              }}>
+              {item.label}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>)
   );
 }
