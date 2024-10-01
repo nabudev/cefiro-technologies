@@ -35,6 +35,12 @@ export function ProjectCarousel() {
       title: "AutoElite Motors",
       description: "Sitio web de concesionaria diseñado y desarrollado para promocionar la venta de automóviles",
       image: "img/autoelite.png?height=400&width=600"
+    },
+    {
+      id: 5,
+      title: "Café Delicia",
+      description: "Página web informátiva desarrollada para el Café Delicia.",
+      image: "img/cafe.png?height=400&width=600"
     }
   ]
 
