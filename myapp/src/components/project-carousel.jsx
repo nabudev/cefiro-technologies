@@ -39,25 +39,27 @@ export function ProjectCarousel() {
   ]
 
   return (
-    (<section
-      className="w-full py-12 md:py-24 lg:py-32 bg-blue-950">
-      <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">Nuestros Proyectos</h2>
-        <p className="text-xl font-bold text-center text-white mb-12">Te mostramos nuestros últimos proyectos donde plasmamos nuestra calidad de diseño y desarrollo</p>
+    <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 bg-blue-950">
+      <div className="container px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6 sm:mb-8">Nuestros Proyectos</h2>
+        <p className="text-lg sm:text-xl font-bold text-center text-white mb-8 sm:mb-12 max-w-3xl mx-auto">
+          Te mostramos nuestros últimos proyectos donde plasmamos nuestra calidad de diseño y desarrollo
+        </p>
         <Carousel className="w-full max-w-5xl mx-auto">
           <CarouselContent>
             {projects.map((project) => (
-              <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={project.id} className="sm:basis-1/2 lg:basis-1/3 pl-4">
                 <div className="p-1">
-                  <Card className="overflow-hidden">
-                    <CardContent className="p-0">
+                  <Card className="overflow-hidden h-full">
+                    <CardContent className="p-0 flex flex-col h-full">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-48 object-cover" />
-                      <div className="p-4">
-                        <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                        <p className="text-sm text-gray-600 mb-4">{project.description}</p>
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="p-4 flex-grow flex flex-col justify-between">
+                        <h3 className="text-base sm:text-lg font-semibold mb-2">{project.title}</h3>
+                        <p className="text-xs sm:text-sm text-gray-600">{project.description}</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -65,10 +67,12 @@ export function ProjectCarousel() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <div className="hidden sm:block">
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </div>
         </Carousel>
       </div>
-    </section>)
-  );
+    </section>
+  )
 }
