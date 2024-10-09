@@ -10,7 +10,7 @@ const NeonGradientCard = ({
   borderRadius = 20,
   neonColors = {
     firstColor: "#173954",
-    secondColor: "#00FFF1",
+    secondColor: "#173954",
   },
   ...props
 }) => {
