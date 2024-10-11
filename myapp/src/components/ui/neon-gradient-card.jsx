@@ -55,7 +55,7 @@ const NeonGradientCard = ({
           "--pseudo-element-background-image": `linear-gradient(0deg, ${neonColors.firstColor}, ${neonColors.secondColor})`,
           "--pseudo-element-width": `${dimensions.width + borderSize * 2}px`,
           "--pseudo-element-height": `${dimensions.height + borderSize * 2}px`,
-          "--after-blur": `${dimensions.width / 10}px`
+          "--after-blur": `${dimensions.width / 20}px`
         }
       }
       className={cn("relative z-10 size-full rounded-[var(--border-radius)]", className)}
