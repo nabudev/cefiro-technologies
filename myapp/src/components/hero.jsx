@@ -35,17 +35,13 @@ export function HeroJsx() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}>
 
-            <BlurFade delay={0.25} inView>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white">
-                Innovación Tecnológica para tu Negocio
-              </h1>
-              <BlurFade delay={0.25 * 2} inView>
-              <p className="text-xl mb-8 text-gray-200">
-                Impulsamos el futuro digital de las empresas con soluciones tecnológicas
-              </p>
-              </BlurFade>
-              
-              <BlurFade delay={0.25 * 3} inView>
+            <BlurFade delay={0.20} inView>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white">
+                  Innovación Tecnológica para tu Negocio
+                </h1>
+                <p className="text-xl mb-8 text-gray-200">
+                  Impulsamos el futuro digital de las empresas con soluciones tecnológicas
+                </p>
                 <div
                   className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                   <Link to="about" smooth={true} duration={500}>
@@ -66,7 +62,7 @@ export function HeroJsx() {
                   </Link>
                 </div>
               </BlurFade>
-            </BlurFade>
+            
         </motion.div>
       </div>
     </div>)
