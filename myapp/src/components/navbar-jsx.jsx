@@ -41,7 +41,7 @@ export function NavbarJsx({ activeSection, setActiveSection }) {
               <motion.a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`text-lg ${activeSection === item.id ? 'text-blue-300' : ''} ${scrolled ? 'text-gray-600 hover:text-blue-600' : 'text-white hover:text-blue-300'}`}
+                className={`text-lg ${activeSection === item.id ? 'text-blue-300' : ''} ${scrolled ? 'text-gray-600 hover:text-gray-800' : 'text-white hover:text-blue-300'}`}
                 onClick={() => setActiveSection(item.id)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}>
