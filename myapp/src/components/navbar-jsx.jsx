@@ -33,7 +33,7 @@ export function NavbarJsx({ activeSection, setActiveSection }) {
         <div className="flex justify-between items-center py-4">
           <a
             href="#"
-            className={`text-2xl font-bold ${scrolled ? 'text-blue-600' : 'text-white'}`}>
+            className={`text-2xl font-bold ${scrolled ? 'text-gray-800' : 'text-white'}`}>
             Cefiro Technologies
           </a>
           <div className="hidden md:flex space-x-8">
