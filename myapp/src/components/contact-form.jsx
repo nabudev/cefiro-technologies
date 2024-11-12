@@ -2,6 +2,40 @@
 
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import IconCloud from "@/components/ui/icon-cloud";
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "firebase",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "cypress",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
+  "figma",
+];
 
 export function ContactFormJsx() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -9,12 +43,11 @@ export function ContactFormJsx() {
   const [submitMessage, setSubmitMessage] = useState('');
 
   const onSubmit = async (data, event) => {
-    event.preventDefault();  // Evita el comportamiento predeterminado del formulario
+    event.preventDefault();
     setIsSubmitting(true);
     
     try {
-      // Realiza el envío a FormSubmit usando fetch
-      const response = await fetch('https://formsubmit.co/ajax/nabudev01@gmail.com', {  // Cambia a tu correo registrado en FormSubmit
+      const response = await fetch('https://formsubmit.co/ajax/nabudev01@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,52 +74,62 @@ export function ContactFormJsx() {
   };
 
   return (
-    (<div className="py-20 bg-white">
+    <div className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-8">Contáctanos para solicitar cotización</h2>
-        <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
-          <div className="mb-4">
-            <label htmlFor="name" className="block mb-2">Tú nombre</label>
-            <input
-              type="text"
-              id="name"
-              {...register('name', { required: 'Este campo es requerido' })}
-              className="w-full p-2 border rounded" />
-            {errors.name && <span className="text-red-500">{errors.name.message}</span>}
+        <div className="flex flex-wrap -mx-4">
+          {/* Lado izquierdo vacío */}
+          <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+              <IconCloud iconSlugs={slugs} />
           </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block mb-2">Tú email</label>
-            <input
-              type="email"
-              id="email"
-              {...register('email', { 
-                required: 'Este campo es requerido',
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: 'Dirección de email inválida'
-                }
-              })}
-              className="w-full p-2 border rounded" />
-            {errors.email && <span className="text-red-500">{errors.email.message}</span>}
+
+          {/* Lado derecho con el formulario */}
+          <div className="w-full md:w-1/2 px-4">
+            <h2 className="text-4xl font-bold text-center mb-8">Contáctanos para solicitar cotización</h2>
+            <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
+              <div className="mb-4">
+                <label htmlFor="name" className="block mb-2">Tú nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  {...register('name', { required: 'Este campo es requerido' })}
+                  className="w-full p-2 border rounded" />
+                {errors.name && <span className="text-red-500">{errors.name.message}</span>}
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block mb-2">Tú email</label>
+                <input
+                  type="email"
+                  id="email"
+                  {...register('email', { 
+                    required: 'Este campo es requerido',
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: 'Dirección de email inválida'
+                    }
+                  })}
+                  className="w-full p-2 border rounded" />
+                {errors.email && <span className="text-red-500">{errors.email.message}</span>}
+              </div>
+              <div className="mb-4">
+                <label htmlFor="message" className="block mb-2">Describe tu consulta</label>
+                <textarea
+                  id="message"
+                  {...register('message', { required: 'Este campo es requerido' })}
+                  className="w-full p-2 border rounded"
+                  rows="4"></textarea>
+                {errors.message && <span className="text-red-500">{errors.message.message}</span>}
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-gray-800 text-white font-bold py-2 px-4 rounded-full hover:bg-gray-700 transition duration-300"
+                disabled={isSubmitting}>
+                {isSubmitting ? 'Enviando...' : 'Enviar'}
+              </button>
+              {submitMessage && <p className="mt-4 text-green-600">{submitMessage}</p>}
+            </form>
           </div>
-          <div className="mb-4">
-            <label htmlFor="message" className="block mb-2">Describe tu consulta</label>
-            <textarea
-              id="message"
-              {...register('message', { required: 'Este campo es requerido' })}
-              className="w-full p-2 border rounded"
-              rows="4"></textarea>
-            {errors.message && <span className="text-red-500">{errors.message.message}</span>}
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-gray-800 text-white font-bold py-2 px-4 rounded-full hover:bg-gray-700 transition duration-300"
-            disabled={isSubmitting}>
-            {isSubmitting ? 'Enviando...' : 'Enviar'}
-          </button>
-          {submitMessage && <p className="mt-4 text-green-600">{submitMessage}</p>}
-        </form>
+        </div>
       </div>
-    </div>)
+    </div>
   );
 }
