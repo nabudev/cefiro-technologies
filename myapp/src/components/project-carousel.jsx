@@ -2,6 +2,8 @@
 
 import * as React from "react"
 import { Card, CardContent } from "@/components/ui/card"
+import GridPattern from "@/components/ui/animated-grid-pattern"
+import { cn } from "@/lib/utils";
 import {
   Carousel,
   CarouselContent,
@@ -45,11 +47,21 @@ export function ProjectCarousel() {
   ]
 
   return (
-    <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-800">
+    <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-800 relative flex h-full items-center justify-center overflow-hidden bg-background p-20 md:shadow-xl">
+      <GridPattern
+        numSquares={30}
+        maxOpacity={0.5}
+        duration={3}
+        repeatDelay={1}
+        className={cn(
+          "[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+        )}
+      />
       <div className="container px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6 sm:mb-8">Nuestros Proyectos</h2>
         <p className="text-lg sm:text-xl font-bold text-center text-white mb-8 sm:mb-12 max-w-3xl mx-auto">
-          Te mostramos nuestros últimos proyectos donde plasmamos nuestra calidad de diseño y desarrollo
+          Te mostramos nuestros últimos trabajos donde plasmamos nuestra calidad de diseño y desarrollo
         </p>
         <Carousel className="w-full max-w-5xl mx-auto">
           <CarouselContent>
