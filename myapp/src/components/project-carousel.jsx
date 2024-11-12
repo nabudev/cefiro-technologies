@@ -47,7 +47,7 @@ export function ProjectCarousel() {
   ]
 
   return (
-    <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-800 relative flex h-full items-center justify-center overflow-hidden bg-background p-20 md:shadow-xl">
+    <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-800 relative flex h-full items-center justify-center overflow-hidden bg-background p-4 sm:p-20 md:shadow-xl">
       <GridPattern
         numSquares={30}
         maxOpacity={0.5}
@@ -63,7 +63,7 @@ export function ProjectCarousel() {
         <p className="text-lg sm:text-xl font-bold text-center text-white mb-8 sm:mb-12 max-w-3xl mx-auto">
           Te mostramos nuestros últimos trabajos donde plasmamos nuestra calidad de diseño y desarrollo
         </p>
-        <Carousel className="w-full max-w-5xl mx-auto">
+        <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-3xl lg:max-w-5xl mx-auto">
           <CarouselContent>
             {projects.map((project) => (
               <CarouselItem key={project.id} className="sm:basis-1/2 lg:basis-1/3 pl-4">
@@ -73,7 +73,7 @@ export function ProjectCarousel() {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-48 object-cover"
+                        className="w-full h-48 sm:h-56 md:h-64 object-cover"
                       />
                       <div className="p-4 flex-grow flex flex-col justify-between">
                         <h3 className="text-base sm:text-lg font-semibold mb-2">{project.title}</h3>
@@ -85,9 +85,18 @@ export function ProjectCarousel() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="hidden sm:block">
-            <CarouselPrevious className="left-2" />
-            <CarouselNext className="right-2" />
+          <div className="flex justify-center w-full py-2 gap-2 sm:hidden">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                className="h-3 w-3 rounded-full bg-gray-300 focus:outline-none"
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+          <div className="hidden sm:block absolute inset-0 pointer-events-none">
+            <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 pointer-events-auto" />
+            <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-auto" />
           </div>
         </Carousel>
       </div>
