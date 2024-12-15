@@ -11,7 +11,7 @@ export function HeroJsx() {
     (<div
       className="relative bg-blue-950 text-black min-h-screen flex items-center"
       style={{
-        background: "linear-gradient(135deg, #1E3A8A, #6366F1)", // Fondo degradado de azul oscuro a lavanda
+        background: "linear-gradient(135deg, #173954, #173954)", // Fondo degradado de azul oscuro a lavanda
       }}
       >
       {/* Imagen de fondo */}
@@ -37,10 +37,10 @@ export function HeroJsx() {
 
             <BlurFade delay={0.20} inView>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white">
-                  Innovación Tecnológica para tu Negocio
+                  Innovación Tecnológica <span className="block text-[#61dafb] xl:inline">para tu negocio</span>
                 </h1>
                 <p className="text-xl mb-8 text-gray-200">
-                  Impulsamos el futuro digital de las empresas con soluciones tecnológicas
+                En Cefiro Technologies, transformamos tus ideas en realidad digital. Creamos sitios y aplicaciones web que impulsan el crecimiento de tu empresa.
                 </p>
                 <div
                   className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -49,7 +49,7 @@ export function HeroJsx() {
                       className="bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}>
-                      Conocenos
+                      Conoce más
                     </motion.button>
                   </Link>
                   <Link to="contact" smooth={true} duration={500}>
