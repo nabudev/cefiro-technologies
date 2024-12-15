@@ -46,7 +46,7 @@ export function HeroJsx() {
                   className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                   <Link to="about" smooth={true} duration={500}>
                     <motion.button
-                      className="bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300"
+                      className="bg-white text-gray-800 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}>
                       Conoce más
@@ -54,7 +54,7 @@ export function HeroJsx() {
                   </Link>
                   <Link to="contact" smooth={true} duration={500}>
                     <motion.button
-                      className="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-blue-600 transition duration-300"
+                      className="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-gray-800 transition duration-300"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}>
                       Contáctanos
