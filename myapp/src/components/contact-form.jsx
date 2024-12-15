@@ -2,40 +2,6 @@
 
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import IconCloud from "@/components/ui/icon-cloud";
-
-const slugs = [
-  "typescript",
-  "javascript",
-  "dart",
-  "java",
-  "react",
-  "flutter",
-  "android",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "prisma",
-  "amazonaws",
-  "postgresql",
-  "firebase",
-  "nginx",
-  "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
-  "docker",
-  "git",
-  "jira",
-  "github",
-  "gitlab",
-  "visualstudiocode",
-  "androidstudio",
-  "sonarqube",
-  "figma",
-];
 
 export function ContactFormJsx() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -74,16 +40,9 @@ export function ContactFormJsx() {
   };
 
   return (
-    <div className="py-20 bg-white">
+    <div className="py-20 bg-white flex items-center justify-center min-h-screen">
       <div className="container mx-auto px-6">
-        <div className="flex flex-wrap -mx-4">
-          {/* Lado izquierdo vacío */}
-          <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
-              <IconCloud iconSlugs={slugs} />
-          </div>
-
-          {/* Lado derecho con el formulario */}
-          <div className="w-full md:w-1/2 px-4">
+          <div className="w-full">
             <h2 className="text-4xl font-bold text-center mb-8">Contáctanos para solicitar cotización</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
               <div className="mb-4">
@@ -128,7 +87,6 @@ export function ContactFormJsx() {
               {submitMessage && <p className="mt-4 text-green-600">{submitMessage}</p>}
             </form>
           </div>
-        </div>
       </div>
     </div>
   );
