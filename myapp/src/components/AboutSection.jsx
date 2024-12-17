@@ -17,7 +17,7 @@ const servicesData = [
   {
     id: 3,
     title: "Soporte y Mantenimiento",
-    description: "Ofrecemos servicios de soporte técnico y mantenimiento continuo para garantizar que sus sistemas funcionen sin problemas. Disponibilidad completa para resolver cualquier incidencia y mantener su infraestructura tecnológica actualizada y segura.",
+    description: "Ofrecemos servicios de soporte técnico y mantenimiento continuo para garantizar que tus sistemas funcionen sin problemas. Disponibilidad completa para resolver cualquier incidencia y mantener su infraestructura tecnológica actualizada y segura.",
     image: "/img/soporte.png"
   }
 ];
