@@ -10,7 +10,7 @@ const servicesData = [
   },
   {
     id: 2,
-    title: "Sistema de Gestión Empresarial y/o Comercial",
+    title: "Sistemas de Gestión Empresarial y/o Comercial",
     description: "Desarrollamos soluciones personalizadas integrando todos los procesos de tu negocio en un sistema, permitiéndote optimizar y mejorar la eficiencia operativa.",
     image: "/img/sge.png"
   },
