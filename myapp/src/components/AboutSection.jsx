@@ -1,40 +1,65 @@
+'use client';
 import React from 'react';
+
+const servicesData = [
+  {
+    id: 1,
+    title: "Landing Pages",
+    description: "Creamos sitios web atractivos y efectivos que convierten visitantes en clientes de tu negocio. Nuestro diseño se enfoca en la experiencia del usuario para impulsar el crecimiento de tu negocio.",
+    image: "/img/landing.png"
+  },
+  {
+    id: 2,
+    title: "Sistema de Gestión Empresarial y/o Comercial",
+    description: "Desarrollamos soluciones personalizadas integrando todos los procesos de tu negocio en un sistema, permitiéndote optimizar y mejorar la eficiencia operativa.",
+    image: "/img/sge.png"
+  },
+  {
+    id: 3,
+    title: "Soporte y Mantenimiento",
+    description: "Ofrecemos servicios de soporte técnico y mantenimiento continuo para garantizar que sus sistemas funcionen sin problemas. Disponibilidad completa para resolver cualquier incidencia y mantener su infraestructura tecnológica actualizada y segura.",
+    image: "/img/soporte.png"
+  }
+];
 
 const AboutSection = () => {
   return (
-    (<section
-      className="relative overflow-hidden bg-gradient-to-br from-white to-green-50">
+    <section className="relative overflow-hidden bg-gradient-to-br from-white to-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-center py-16">
-          {/* Image Column */}
-          <div className="relative">
-            <div className="relative z-10">
-              <img
-                src="img/logosinfondo.png"
-                alt="Professional using a tablet"
-                className="w-full h-auto object-cover" />
-            </div>
-            {/* Decorative Elements */}
-            <div className="absolute inset-0 z-0">
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-gray-200/30 to-gray-600/30 rounded-3xl transform rotate-3"></div>
-              <div
-                className="absolute top-1/4 right-1/4 w-32 h-32 bg-gray-500/20 rounded-full blur-xl"></div>
-            </div>
-          </div>
-
-          {/* Content Column */}
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Impulsamos la digitalización
-            </h2>
-            <p className="text-lg text-gray-600">
-            Creemos en crear un entorno donde la autonomía y el crecimiento sean el centro de todo. Inspirados en el potencial infinito de la tecnología y el aprendizaje, empoderamos a nuestros clientes para que tomen el control de sus proyectos, definan su visión y alcancen sus objetivos, mientras nosotros cultivamos soluciones innovadoras para impulsar su éxito.
-            </p>
-          </div>
+        <div className="mt-20">
+          <h2 className="text-3xl font-bold text-center mb-12">Nuestros servicios</h2>
         </div>
+        {servicesData.map((service, index) => (
+          <div key={service.id} className={`grid lg:grid-cols-2 gap-8 items-center py-16 ${index % 2 !== 0 ? 'lg:grid-flow-col-dense' : ''}`}>
+            {/* Image Column */}
+            <div className={`relative ${index % 2 !== 0 ? 'lg:col-start-2' : ''}`}>
+              <div className="relative z-10">
+                <img
+                  src={service.image}
+                  alt={`Ilustración para ${service.title}`}
+                  className="w-full h-auto object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              {/* Decorative Elements */}
+              <div className="absolute inset-0 z-0">
+                <div className={`absolute inset-0 bg-gradient-to-br from-gray-200/30 to-gray-600/30 rounded-3xl transform ${index % 2 === 0 ? 'rotate-3' : '-rotate-3'}`}></div>
+                <div className={`absolute ${index % 2 === 0 ? 'top-1/4 right-1/4' : 'bottom-1/4 left-1/4'} w-32 h-32 bg-gray-500/20 rounded-full blur-xl`}></div>
+              </div>
+            </div>
+
+            {/* Content Column */}
+            <div className={`space-y-6 ${index % 2 !== 0 ? 'lg:col-start-1' : ''}`}>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+                {service.title}
+              </h2>
+              <p className="text-lg text-gray-600">
+                {service.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
-    </section>)
+    </section>
   );
 };
 

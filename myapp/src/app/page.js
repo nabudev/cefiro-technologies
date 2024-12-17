@@ -6,7 +6,6 @@ import { FooterJsx } from "@/components/footer";
 import { WhatWeDo } from "@/components/what-we-do";
 import { ProjectCarousel } from "@/components/project-carousel";
 import { WhatsAppButtonJsx } from "@/components/whats-app-button";
-import { Servicios } from "@/components/servicios";
 import AboutSection from "@/components/AboutSection";
 import React, { useState } from 'react';
 
@@ -24,9 +23,6 @@ export default function Home(){
       </section>
       <section id="">
         <AboutSection />
-      </section>
-      <section id="">
-        <Servicios />
       </section>
       <section id="projects">
         <ProjectCarousel />
