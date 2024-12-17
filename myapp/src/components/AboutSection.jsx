@@ -6,19 +6,19 @@ const servicesData = [
     id: 1,
     title: "Landing Pages",
     description: "Creamos sitios web atractivos y efectivos que convierten visitantes en clientes de tu negocio. Nuestro diseño se enfoca en la experiencia del usuario para impulsar el crecimiento de tu negocio.",
-    image: "/img/landing.png"
+    image: "/img/landing.webp"
   },
   {
     id: 2,
     title: "Sistemas de Gestión Empresarial y/o Comercial",
     description: "Desarrollamos soluciones personalizadas integrando todos los procesos de tu negocio en un sistema, permitiéndote optimizar y mejorar la eficiencia operativa.",
-    image: "/img/sge.png"
+    image: "/img/sge.webp"
   },
   {
     id: 3,
     title: "Soporte y Mantenimiento",
     description: "Ofrecemos servicios de soporte técnico y mantenimiento continuo para garantizar que tus sistemas funcionen sin problemas. Disponibilidad completa para resolver cualquier incidencia y mantener su infraestructura tecnológica actualizada y segura.",
-    image: "/img/soporte.png"
+    image: "/img/soporte.webp"
   }
 ];
 

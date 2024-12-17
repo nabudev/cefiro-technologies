@@ -18,31 +18,31 @@ export function ProjectCarousel() {
       id: 1,
       title: "Instituto Superior San Cristobal",
       description: "Sistema de gestión para institucion educativa que permite a los alumnos inscribirse a los exámenes finales de sus carreras",
-      image: "img/issc.png?height=400&width=600"
+      image: "img/issc.webp?height=400&width=600"
     },
     {
       id: 2,
       title: "Mena Vial SRL",
       description: "Sitio web informativo para una empresa de construcción con el fin de mostrarle a potenciales clientes los productos y servicios que se ofrecen",
-      image: "img/mena.png?height=400&width=600"
+      image: "img/mena.webp?height=400&width=600"
     },
     {
       id: 4,
       title: "Inmobiliaria Zamora",
       description: "Página web diseñado y desarrollado para impulsar el alcance de visualizaciones de los servicios de Inmobiliaria Zamora",
-      image: "img/zamora.png?height=400&width=600"
+      image: "img/zamora.webp?height=400&width=600"
     },
     {
       id: 3,
       title: "AutoElite Motors",
       description: "Sitio web de concesionaria diseñado y desarrollado para promocionar la venta de automóviles",
-      image: "img/autoelite.png?height=400&width=600"
+      image: "img/autoelite.webp?height=400&width=600"
     },
     {
       id: 5,
       title: "Café Delicia",
       description: "Página web desarrollada para la cafetería Cafe Delicia, Diseñada para promocionar los productos del bar. En esta web los clientes podrán visualizar el menú e información relevante de la cafetería.",
-      image: "img/cafe.png?height=400&width=600"
+      image: "img/cafe.webp?height=400&width=600"
     }
   ]
 
