@@ -40,7 +40,7 @@ export function HeroJsx() {
                   Innovación Tecnológica <span className="block text-[#61dafb] xl:inline">para tu negocio</span>
                 </h1>
                 <p className="text-xl mb-8 text-gray-200">
-                En Cefiro Technologies, transformamos tus ideas en realidad digital. Creamos sitios y aplicaciones web que impulsan el crecimiento de tu empresa.
+                Transformamos tus ideas en realidad digital. Creamos sitios y aplicaciones web que impulsan el crecimiento de tu empresa.
                 </p>
                 <div
                   className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
