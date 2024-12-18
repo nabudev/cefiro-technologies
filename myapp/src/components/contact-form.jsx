@@ -13,7 +13,7 @@ export function ContactFormJsx() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://formsubmit.co/ajax/nabudev01@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/cefirotechnologies@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
