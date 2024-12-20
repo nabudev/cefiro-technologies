@@ -10,12 +10,18 @@ const servicesData = [
   },
   {
     id: 2,
+    title: "Soluciones Web a Medida",
+    description: "Desarrollamos sistemas web personalizados que van más allá de una landing page, incluyendo funcionalidades dinámicas como gestión de usuarios, catálogos de productos, reservas en línea, paneles administrativos y más.",
+    image: "/img/swm.webp"
+  },
+  {
+    id: 3,
     title: "Sistemas de Gestión Empresarial y/o Comercial",
     description: "Desarrollamos soluciones personalizadas integrando todos los procesos de tu negocio en un sistema, permitiéndote optimizar y mejorar la eficiencia operativa.",
     image: "/img/sge.webp"
   },
   {
-    id: 3,
+    id: 4,
     title: "Soporte y Mantenimiento",
     description: "Ofrecemos servicios de soporte técnico y mantenimiento continuo para garantizar que tus sistemas funcionen sin problemas. Disponibilidad completa para resolver cualquier incidencia y mantener su infraestructura tecnológica actualizada y segura.",
     image: "/img/soporte.webp"
