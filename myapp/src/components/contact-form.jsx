@@ -11,33 +11,33 @@ export function ContactFormJsx() {
   const onSubmit = async (data, event) => {
     event.preventDefault();
     setIsSubmitting(true);
-    
+  
     try {
-      const response = await fetch('https://formsubmit.co/ajax/cefirotechnologies@gmail.com', {
+      const response = await fetch('/api/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
         },
         body: JSON.stringify({
           name: data.name,
           email: data.email,
-          message: data.message
-        })
+          message: data.message,
+        }),
       });
-
+  
       if (response.ok) {
         setSubmitMessage('¡Gracias por contactarnos! Te responderemos pronto.');
       } else {
-        setSubmitMessage('Ocurrió un error. Por favor, inténtalo de nuevo.');
+        setSubmitMessage('Ocurrió un error al enviar el correo. Por favor, inténtalo de nuevo.');
       }
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
       setSubmitMessage('Ocurrió un error al enviar el mensaje. Intenta nuevamente.');
     }
-
+  
     setIsSubmitting(false);
   };
+  
 
   return (
     <div className="py-20 bg-white flex items-center justify-center min-h-screen">
