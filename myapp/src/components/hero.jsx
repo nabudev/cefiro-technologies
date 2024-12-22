@@ -49,7 +49,7 @@ export function HeroJsx() {
                       className="bg-white text-gray-800 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}>
-                      Conoce más
+                      Sobre Nosotros
                     </motion.button>
                   </Link>
                   <Link to="contact" smooth={true} duration={500}>
@@ -57,7 +57,7 @@ export function HeroJsx() {
                       className="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-gray-800 transition duration-300"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}>
-                      Contáctanos
+                      Contactanos
                     </motion.button>
                   </Link>
                 </div>
