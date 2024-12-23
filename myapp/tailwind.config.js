@@ -76,7 +76,10 @@ module.exports = {
   					transform: 'translate(-50%, -50%) scale(0.9)'
   				}
   			}
-  		}
+  		},
+		  backgroundImage: {
+			'gradient-custom': 'linear-gradient(90deg, #173954, #61dafb)',
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],

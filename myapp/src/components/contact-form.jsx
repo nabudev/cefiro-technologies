@@ -43,7 +43,7 @@ export function ContactFormJsx() {
     <div className="py-20 bg-white flex items-center justify-center min-h-screen">
       <div className="container mx-auto px-6">
           <div className="w-full">
-            <h2 className="text-4xl font-bold text-center mb-8">¡Contactate con nosotros!</h2>
+            <h2 className="text-4xl font-bold text-center mb-8 ">¡Contactate con nosotros!</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
               <div className="mb-4">
                 <label htmlFor="name" className="block mb-2">Tú nombre</label>
