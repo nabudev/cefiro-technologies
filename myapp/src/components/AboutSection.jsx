@@ -33,7 +33,7 @@ const AboutSection = () => {
     <section className="relative overflow-hidden bg-gradient-to-br from-white to-green-50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-20">
-          <h2 className="text-5xl font-bold text-center mb-12">NUESTROS SERVICIOS</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">NUESTROS SERVICIOS</h2>
         </div>
         {servicesData.map((service, index) => (
           <div key={service.id} className={`grid lg:grid-cols-2 gap-8 items-center py-16 ${index % 2 !== 0 ? 'lg:grid-flow-col-dense' : ''}`}>
