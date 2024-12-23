@@ -18,7 +18,7 @@ export function WhatWeDo() {
           <NeonGradientCard className="max-w-sm items-center justify-center text-center">
             <ServiceCard
               icon={<DollarSign className="h-10 w-10 mb-4 text-primary" />}
-              title="Presupuesto"
+              title="Presupuestos"
               description="Ofrecemos presupuestos sin costo, transparentes y detallados. Con opciones flexibles para diferentes escalas y necesidades." />
           </NeonGradientCard>
           <NeonGradientCard className="max-w-sm items-center justify-center text-center">
