@@ -43,7 +43,13 @@ export function ProjectCarousel() {
       title: "Café Delicia",
       description: "Página web desarrollada para la cafetería Cafe Delicia, Diseñada para promocionar los productos del bar. En esta web los clientes podrán visualizar el menú e información relevante de la cafetería.",
       image: "img/cafe.webp?height=400&width=600"
-    }
+    },
+    {
+      id: 6,
+      title: "Gestor de ventas",
+      description: "Desarrollamos una herramienta que te permite gestionar las ventas, calcular costos y márgenes de ganancia de manera rápida y precisa, facilitando la gestión de presupuestos y cotizaciones.",
+      image: "img/gestorventas.webp?height=400&width=600"
+    },
   ]
 
   return (
