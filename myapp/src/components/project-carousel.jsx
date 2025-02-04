@@ -30,6 +30,13 @@ export function ProjectCarousel() {
 
     {
       id: 3,
+      title: "Roobet Bot",
+      description: "Sistema de detección y notificación de información automatizado. Analiza en tiempo real y de manera precisa los eventos de la plataforma y lo notifica a través del canal de mensajeria Telegram",
+      image: "img/roobet.webp?height=400&width=600"
+    },
+
+    {
+      id: 4,
       title: "Gestor de ventas",
       description: "Desarrollamos una herramienta que te permite gestionar las ventas, calcular costos y márgenes de ganancia de manera rápida y precisa, facilitando la gestión de presupuestos y cotizaciones.",
       image: "img/gestorventas.webp?height=400&width=600"
