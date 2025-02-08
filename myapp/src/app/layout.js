@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Cefiro Technologies",
+  title: "Empresa de Software | Cefiro Technologies",
   description: "Cefiro Technologies ofrece soluciones web a medida, desarrollo de landing pages, sistemas de gestión empresarial y comercial, y soporte y mantenimiento de sistemas.",
   icons: {
     icon: '/app/favicon.ico',
