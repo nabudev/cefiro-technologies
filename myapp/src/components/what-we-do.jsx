@@ -1,46 +1,53 @@
-'use client'
+'use client';
 
-import { Users, Code, DollarSign } from "lucide-react"
-import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
+import { Target , Lightbulb , Handshake  } from "lucide-react"
 
 export function WhatWeDo() {
   return (
-    (<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
-      <div className="container px-4 md:px-6">
-      <h2 className="text-4xl text-[#173954] font-bold text-center mb-12">¿QUÉ HACEMOS?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          <NeonGradientCard className="max-w-sm items-center justify-center text-center">
-            <ServiceCard
-                icon={<Code className="h-10 w-10 mb-4 text-primary" />}
-                title="Desarrollo Web"
-                description="Creamos sitios web modernos que se adaptan a las necesidades de tu negocio." />
-          </NeonGradientCard>
-          <NeonGradientCard className="max-w-sm items-center justify-center text-center">
-            <ServiceCard
-              icon={<DollarSign className="h-10 w-10 mb-4 text-primary" />}
-              title="Presupuestos"
-              description="Ofrecemos presupuestos sin costo, transparentes y detallados. Con opciones flexibles para diferentes escalas y necesidades." />
-          </NeonGradientCard>
-          <NeonGradientCard className="max-w-sm items-center justify-center text-center">
-            <ServiceCard
-              icon={<Users className="h-10 w-10 mb-4 text-primary" />}
-              title="Reuniones"
-              description="Mantenemos una comunicación constante a través de reuniones regulares para garantizar que estés siempre al tanto del progreso de tu proyecto." />
-          </NeonGradientCard>
+    <section className="container mx-auto px-4 py-16 md:py-24 relative">
+      <div className="relative">
+        {/* Primera sección - Izquierda arriba */}
+        <div className="flex items-start mb-24 gap-6">
+          <Lightbulb className="text-gray-100 flex-shrink-0" size={80} />
+          <div className="max-w-md">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-4">¿Qué hacemos?</h2>
+            <p className="text-lg text-gray-600">
+                Creamos soluciones que impulsan el crecimiento de las empresas.
+            </p>
+          </div>
+        </div>
+
+        {/* Segunda sección - Derecha medio */}
+        <div className="flex items-start mb-24 gap-6 ml-auto flex-row-reverse">
+          <Handshake  className="text-gray-100 flex-shrink-0" size={80} />
+          <div className="max-w-md">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-4">¿Cómo lo hacemos?</h2>
+            <p className="text-lg text-gray-600">Adaptándonos a las necesidades de nuestros clientes.</p>
+          </div>
+        </div>
+
+        {/* Tercera sección - Izquierda abajo */}
+        <div className="flex items-start gap-6">
+          <Target  className="text-gray-100 flex-shrink-0" size={80} />
+          <div className="max-w-md">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-4">¿Por qué lo hacemos?</h2>
+            <p className="text-lg text-gray-600">Para garantizar el éxito y crecimiento de nuestros clientes.</p>
+          </div>
+        </div>
+
+        {/* Líneas decorativas */}
+        <div className="absolute top-0 right-0 w-full h-full pointer-events-none">
+          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path
+              d="M20,20 L80,50 L20,80"
+              fill="none"
+              stroke="#D1D5DB"
+              strokeWidth="0.5"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
         </div>
       </div>
-    </section>)
-  );
+    </section>
+  )
 }
-
-function ServiceCard({ icon, title, description }) {
-  return (
-    (<div
-      className="flex flex-col items-center text-center p-6">
-      {icon}
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>)
-  );
-}
-
