@@ -1,8 +1,33 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const HeroJsx = () => {
+  useEffect(() => {
+    const smoothScroll = (e) => {
+      e.preventDefault();
+      const targetId = e.currentTarget.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    };
+
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', smoothScroll);
+    });
+
+    return () => {
+      links.forEach(link => {
+        link.removeEventListener('click', smoothScroll);
+      });
+    };
+  }, []);
+
   return (
     <section className="container mx-auto px-4 py-12 md:py-24">
       <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
