@@ -1,6 +1,11 @@
 'use client';
 
 const Footer = () => {
+
+  // Reemplaza este número con el número de WhatsApp de Cefiro Technologies
+  const phoneNumber = '3863434058';
+  const message = encodeURIComponent('Hola, me gustaría obtener más información sobre Cefiro Technologies.');
+
   return (
     <div className="mt-8 bg-gray-800 pt-9">
       <div className="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
@@ -27,7 +32,7 @@ const Footer = () => {
                 </svg>
               </div>
               <div className="ml-[18px]">
-                <a href="tel:+911800123444" className="font-Inter text-[14px] font-medium text-white">
+                <a href={`https://wa.me/${phoneNumber}?text=${message}`} className="font-Inter text-[14px] font-medium text-white">
                   +54 9 3863 434058
                 </a>
                 <p className="font-Inter text-[12px] font-medium text-white">Celular</p>
@@ -59,9 +64,9 @@ const Footer = () => {
                 </svg>
               </div>
               <div className="ml-[18px]">
-                <a href="mailto:help@lorem.com" className="font-Inter text-[14px] font-medium text-[#fff]">
+                <p className="font-Inter text-[14px] font-medium text-[#fff]">
                   Tucumán - Argentina
-                </a>
+                </p>
                 <p className="font-Inter text-[12px] font-medium text-white">Nuestra ubicación</p>
               </div>
             </div>
