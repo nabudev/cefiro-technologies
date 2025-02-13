@@ -33,7 +33,7 @@ export function NavbarJsx({ activeSection, setActiveSection }) {
         <div className="flex justify-between items-center py-4">
           <a
             href="#"
-            className={`text-2xl font-bold ${scrolled ? 'text-[#173954]' : 'text-[#61dafb]'}`}>
+            className={`text-2xl font-bold ${scrolled ? 'text-[#173954]' : 'text-[#173954]'}`}>
             Cefiro Technologies
           </a>
           <div className="hidden md:flex space-x-8">
@@ -41,7 +41,7 @@ export function NavbarJsx({ activeSection, setActiveSection }) {
               <motion.a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`text-lg ${activeSection === item.id ? 'text-blue-300' : ''} ${scrolled ? 'text-gray-600 hover:text-gray-800' : 'text-[#61dafb] hover:text-blue-300'}`}
+                className={`text-lg ${activeSection === item.id ? 'text-blue-300' : ''} ${scrolled ? 'text-gray-600 hover:text-blue-300' : 'text-[#173954] hover:text-blue-300'}`}
                 onClick={() => setActiveSection(item.id)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}>

@@ -1,6 +1,6 @@
 'use client';
 import { NavbarJsx } from "@/components/navbar-jsx";
-import { HeroJsx } from "@/components/hero";
+import  HeroJsx  from "@/components/hero";
 import { ContactFormJsx } from "@/components/contact-form";
 import  FooterJsx  from "@/components/footer";
 import { WhatWeDo } from "@/components/what-we-do";
