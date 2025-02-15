@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect } from 'react'
+import BlurFade from './ui/blur-fade';
 
 const HeroJsx = () => {
   useEffect(() => {
@@ -39,10 +40,12 @@ const HeroJsx = () => {
           />
         </div>
         <div className="space-y-6 text-center md:text-left">
-          <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-            Creamos tecnología{" "}
-            <span className="block">que impulsan el crecimiento.</span>
-          </h1>
+          <BlurFade>
+            <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
+              Creamos tecnología{" "}
+              <span className="block">que impulsan el crecimiento.</span>
+            </h1>
+          </BlurFade>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
             <a 
               href="#contact"
