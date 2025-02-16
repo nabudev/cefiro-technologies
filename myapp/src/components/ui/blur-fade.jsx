@@ -6,7 +6,7 @@ export default function BlurFade({
   children,
   className,
   variant,
-  duration = 0.4,
+  duration = 0.8,
   delay = 0,
   yOffset = 6,
   inView = false,
@@ -30,7 +30,7 @@ export default function BlurFade({
         exit="hidden"
         variants={combinedVariants}
         transition={{
-          delay: 0.04 + delay,
+          delay: 0.08 + delay,
           duration,
           ease: "easeOut",
         }}
