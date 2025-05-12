@@ -1,73 +1,91 @@
-'use client';
-import React from 'react';
+"use client"
 
-const servicesData = [
-  {
-    id: 1,
-    title: "Landing Pages",
-    description: "Creamos sitios web atractivos y efectivos que convierten visitantes en clientes de tu negocio. Nuestro diseño se enfoca en la experiencia del usuario para impulsar el crecimiento de tu negocio.",
-    image: "/img/landing.webp"
-  },
-  {
-    id: 2,
-    title: "Soluciones Web a Medida",
-    description: "Desarrollamos sistemas web personalizados que van más allá de una landing page, incluyendo funcionalidades dinámicas como gestión de usuarios, catálogos de productos, reservas en línea, paneles administrativos y más.",
-    image: "/img/swm.webp"
-  },
-  {
-    id: 3,
-    title: "Sistemas de Gestión Empresarial y/o Comercial",
-    description: "Desarrollamos soluciones personalizadas integrando todos los procesos de tu negocio en un sistema, permitiéndote optimizar y mejorar la eficiencia operativa.",
-    image: "/img/sge.webp"
-  },
-  {
-    id: 4,
-    title: "Soporte y Mantenimiento",
-    description: "Ofrecemos servicios de soporte técnico y mantenimiento continuo para garantizar que tus sistemas funcionen sin problemas. Disponibilidad completa para resolver cualquier incidencia y mantener su infraestructura tecnológica actualizada y segura.",
-    image: "/img/soporte.webp"
-  }
-];
+import { useState } from "react"
+import { Globe, Layout, BarChart3, Wrench } from "lucide-react"
+import Link from "next/link"
+import { motion } from "framer-motion"
 
-const AboutSection = () => {
+export default function SolucionesTecnologicas() {
+  const soluciones = [
+    {
+      id: "paginas-web",
+      titulo: "Páginas web",
+      icono: <Globe className="w-12 h-12" />,
+      ruta: "/soluciones/paginas-web",
+    },
+    {
+      id: "aplicaciones-web",
+      titulo: "Aplicaciones web",
+      icono: <Layout className="w-12 h-12" />,
+      ruta: "/soluciones/aplicaciones-web",
+    },
+    {
+      id: "sistemas-gestion",
+      titulo: "Sistemas de gestión empresarial",
+      icono: <BarChart3 className="w-12 h-12" />,
+      ruta: "/soluciones/sistemas-gestion",
+    },
+    {
+      id: "soporte-mantenimiento",
+      titulo: "Soporte y mantenimiento",
+      icono: <Wrench className="w-12 h-12" />,
+      ruta: "/soluciones/soporte-mantenimiento",
+    },
+  ]
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white to-green-50">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-20">
-        <h2 className="text-4xl text-[#173954] font-bold text-center mb-12">NUESTROS SERVICIOS</h2>
-        </div>
-        {servicesData.map((service, index) => (
-          <div key={service.id} className={`grid lg:grid-cols-2 gap-8 items-center py-16 ${index % 2 !== 0 ? 'lg:grid-flow-col-dense' : ''}`}>
-            {/* Image Column */}
-            <div className={`relative ${index % 2 !== 0 ? 'lg:col-start-2' : ''}`}>
-              <div className="relative z-10">
-                <img
-                  src={service.image}
-                  alt={`Ilustración para ${service.title}`}
-                  className="w-full h-auto object-cover rounded-lg shadow-lg"
-                />
-              </div>
-              {/* Decorative Elements */}
-              <div className="absolute inset-0 z-0">
-                <div className={`absolute inset-0 bg-gradient-to-br from-gray-200/30 to-gray-600/30 rounded-3xl transform ${index % 2 === 0 ? 'rotate-3' : '-rotate-3'}`}></div>
-                <div className={`absolute ${index % 2 === 0 ? 'top-1/4 right-1/4' : 'bottom-1/4 left-1/4'} w-32 h-32 bg-gray-500/20 rounded-full blur-xl`}></div>
-              </div>
-            </div>
+    <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Desarrollamos soluciones tecnológicas que impulsan el crecimiento de las Empresas
+        </h2>
+      </div>
 
-            {/* Content Column */}
-            <div className={`space-y-6 ${index % 2 !== 0 ? 'lg:col-start-1' : ''}`}>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
-                {service.title}
-              </h2>
-              <p className="text-lg text-gray-600">
-                {service.description}
-              </p>
-            </div>
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        {soluciones.map((solucion) => (
+          <SolucionCard key={solucion.id} solucion={solucion} />
         ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  )
+}
 
-export default AboutSection;
+function SolucionCard({ solucion }) {
+  const [isHovered, setIsHovered] = useState(false)
+
+  return (
+    <Link href={solucion.ruta}>
+      <motion.div
+        className="flex flex-col items-center justify-center p-6 rounded-lg cursor-pointer"
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+        whileHover={{
+          scale: 1.05,
+          transition: { duration: 0.3 },
+        }}
+      >
+        <motion.div
+          className="bg-gray-100 rounded-full p-6 mb-4"
+          animate={{
+            y: isHovered ? -10 : 0,
+            boxShadow: isHovered ? "0px 10px 15px rgba(0, 0, 0, 0.1)" : "0px 0px 0px rgba(0, 0, 0, 0)",
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          {solucion.icono}
+        </motion.div>
+        <motion.h3
+          className="text-lg font-medium text-center"
+          animate={{
+            color: isHovered ? "#3182ce" : "#1a202c",
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          {solucion.titulo}
+        </motion.h3>
+      </motion.div>
+    </Link>
+  )
+}
+
 
