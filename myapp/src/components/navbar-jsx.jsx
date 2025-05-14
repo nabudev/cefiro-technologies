@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const navItems = [
   { id: 'home', label: 'Inicio' },
   { id: 'about', label: 'Servicios' },
-  { id: 'projects', label: 'Proyectos' },
+  { id: 'projects', label: 'Nosotros' },
   { id: 'contact', label: 'Contacto' },
 ];
 
