@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 export function WhatsAppButtonJsx() {
   // Reemplaza este número con el número de WhatsApp de Cefiro Technologies
-  const phoneNumber = '3863434058';
-  const message = encodeURIComponent('Hola, me gustaría obtener más información sobre Cefiro Technologies.');
+  const phoneNumber = '3863510132';
+  const message = encodeURIComponent('Hola, me gustaría obtener más información sobre los servicios de Cefiro Technologies.');
 
   return (
     (<motion.a

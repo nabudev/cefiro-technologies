@@ -33,7 +33,7 @@ const Footer = () => {
               </div>
               <div className="ml-[18px]">
                 <a href={`https://wa.me/${phoneNumber}?text=${message}`} className="font-Inter text-[14px] font-medium text-white">
-                  +54 9 3863 434058
+                  +54 9 3863 510132
                 </a>
                 <p className="font-Inter text-[12px] font-medium text-white">Celular</p>
               </div>
